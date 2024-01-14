@@ -12,3 +12,19 @@ closeModal.addEventListener("click", () => {
   closeModal.style.display = "none";
   modalContent.style.display = "none";
 });
+
+const accordionBtn = document.querySelectorAll(".faq__accordion__btn");
+const accordionContent = document.querySelectorAll(".accordion__content");
+let isOpen = false;
+
+for (let i = 0; i < accordionBtn.length; i++) {
+  accordionBtn[i].addEventListener("click", () => {
+    isOpen = !isOpen;
+    if (isOpen) {
+      accordionBtn[i].classList.add("show__accordion");
+    } else {
+      accordionBtn[i].classList.remove("show__accordion");
+    }
+  });
+}
+
